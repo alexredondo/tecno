@@ -1,13 +1,10 @@
 # tecno
 Guías de las clases
-sudo overlayroot-chroot bash -c '
-dpkg --configure -a
-apt-get update
-apt-get install --only-upgrade -y google-chrome-stable
-apt-get upgrade -y -o Dpkg::Options::="--force-confold"
-exit
-'
-sudo reboot
+sudo overlayroot-chroot bash -c 'dpkg --configure -a && apt-get update && apt-get install --only-upgrade -y google-chrome-stable && apt-get upgrade -y' ; sudo reboot
+
+sudo apt update && sudo apt install --only-upgrade -y google-chrome-stable && sudo apt upgrade -y && sudo reboot
+
+
 # 1. Entrar al modo de escritura persistente
 sudo overlayroot-chroot bash -c '
 # 2. Reparar instalaciones previas
